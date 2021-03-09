@@ -1,10 +1,10 @@
 
-import React from "react";
+import React from "react"
 import '@progress/kendo-theme-default/dist/all.css';
 import {Lga} from '../data/LGA';
 import {Ward} from '../data/Ward'
 import Form from '../components/Form';
-import Child from '../Child'
+import Child from './Child'
 
 const defaultItemCategory = { stateId: "State Code ..." };
 const defaultItemProduct = { lgaId: "LGA Code ..." };
@@ -123,8 +123,8 @@ click = ()=>{
     const myLga = this.state.myLga;
     const myWard = this.state.myWard;
     const click = this.state.click;
-    const combo = this.state.combo.text
-    const comboVal = this.state.combo.value
+    
+    
     
 
     const hasCategory = category && category !== defaultItemCategory;
@@ -134,12 +134,8 @@ click = ()=>{
 
     if(category && product && order && myState && myLga && myWard  && click)    {
     
-      return  <>        
-      <Child category={category} product={product}
-       order={order} myLga={myLga}
-       myState={myState}  myWard={myWard} click={click}
-       />
-         <div style={{marginTop:'0px', backgroundColor:'purple', height:'200px'}}>
+      return  <>  
+       <div style={{marginTop:'0px', backgroundColor:'purple', height:'200px'}}>
           <center>
          <button  
          
@@ -147,7 +143,12 @@ click = ()=>{
          
          className='btn-primary' style={{marginTop:'80px'}}>Back Home</button>
          </center>
-         </div> 
+         </div>      
+      <Child category={category} product={product}
+       order={order} myLga={myLga}
+       myState={myState}  myWard={myWard} click={click}
+       />
+        
 
        </>
     }

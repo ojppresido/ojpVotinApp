@@ -31,7 +31,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
               onChange={myStateChange}
               defaultItem={defaultItemCategory3}
               value={myState}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
 
               />
           </div>
@@ -46,7 +46,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
             defaultItem={defaultItemProduct3}
             value={myLga}
             ref={myLgaRef}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
 
             />
         </div>
@@ -61,7 +61,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
             defaultItem={defaultItemOrder3}
             value={myWard}
             ref={myWardRef}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
 
             />
         </div>
@@ -77,8 +77,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
 
 <div style={{backgroundColor:''}}>
         <div style={{ display: "inline-block", }}>
-          Code:27/**/**/***
-          <br />
+          Code: 27/**/**/***
           <br />
           <DropDownList
             data={State}
@@ -86,13 +85,15 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
             onChange={categoryChange} 
             defaultItem={defaultItemCategory}
             value={category}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
           />
           
         </div>
   
-        <div style={{ display: "inline-block", marginLeft: "-14px", }}>
+        <div style={{ display: "inline-block", marginLeft: "10px", }}>
+        Code: **/20/**/***/
           
+          <br />
           <DropDownList
             disabled={!hasCategory}
             data={productData}
@@ -101,11 +102,13 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
             defaultItem={defaultItemProduct}
             value={product}
             ref={productRef}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
             />
         </div>
         <div style={{ display: "inline-block", marginLeft: "9px", }}>
+        Code: **/**/14/***/
           
+          <br />
           <DropDownList
             disabled={!hasProduct}
             data={orderData}
@@ -114,7 +117,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
             defaultItem={defaultItemOrder}
             value={order}
             ref={orderRef}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
             />
         </div>
         
@@ -127,7 +130,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
               onChange={categoryChange}
               defaultItem={defaultItemCategory2}
               value={category}
-              style={{width:'6rem'}}
+              style={{width:'9rem'}}
               />
           </div>
           </div>
@@ -141,7 +144,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
             defaultItem={defaultItemProduct2}
             value={product}
             ref={productRef}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
             />
         </div>
 
@@ -155,7 +158,7 @@ const Form = ({defaultItemCategory, category, hasCategory, defaultItemProduct,
             defaultItem={defaultItemOrder2}
             value={order}
             ref={orderRef}
-            style={{width:'6rem'}}
+            style={{width:'9rem'}}
             />
         </div>
 
