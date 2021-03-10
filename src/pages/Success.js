@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Success = () => {
+
+const Success = ({logo, name}) => {
     return (
         <div>
             
@@ -10,7 +12,7 @@ const Success = () => {
         </Link>
         <h2 className='section-title'>{name}</h2>
         <div className='drink'>
-          <img src={image} alt={name}></img>
+          <img src={logo} alt={name}></img>
         
         </div>
       </section>

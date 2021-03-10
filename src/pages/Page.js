@@ -1,7 +1,6 @@
 import React from 'react'
 import img from '../images/download.jpg';
 import { Link } from 'react-router-dom'
-import Ballot from '../components/Party';
 
 
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import adc from '../images/adc.jpg';
 import apc from '../images/apc.jpg';
 import andp from '../images/andp.jpg';
