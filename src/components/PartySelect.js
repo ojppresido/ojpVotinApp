@@ -7,25 +7,55 @@ import mark from '../images/thumb.jpg'
 
 export default function PartySelect({name, logo, category, product, order}) {
 
-  
+  const [vote, setVote] = React.useState(false);
+
+  const handleVote = ()=>{
+    setVote(!vote)
+  }
+
   return (
-    <>
-    <Link to='/voteOk' logo={logo} name={name} className='cocktail' >
+    <>{!vote ?
+      <>
+    <div to='/voteOk' logo={logo} name={name} className='cocktail' >
       <div className='img-container'>
         <img src={logo} alt={name} />
       </div>
       <div className='cocktail-footer'>
         <h3>{name}</h3>
         {/* <p>{info}</p> */}
-        <h5 className='btn btn-primary btn-details'
+        <button className='btn btn-primary btn-details'
+        onClick={handleVote}
         >
-          Vote
-        </h5>
+        vote
+        </button>
       </div>
-    </Link>
+    </div>
     
     <img src={mark} alt='thumb' style={{height: '100px', width:'150px', marginLeft: '200px',marginTop: '-180px', opacity: '50%'}}  />
+   </> :
+
+   <>
+   <div to='/voteOk' logo={logo} name={name} className='cocktail' >
    
-    </>
+      <div className='img-container'>
+        <img src={logo} alt={name} />
+      </div>
+      <div className='cocktail-footer'>
+        <p style={{color:'green'}}>Thumb to vote</p>
+        <button className='btn btn-primary btn-details'
+        onClick={handleVote}
+        >
+          Back
+        </button>
+      </div>
+    </div>
+    <Link to='/voteOk'> 
+    <img src={mark} alt='thumb' style={{height: '100px', width:'250px', marginLeft: '150px',marginTop: '-165px', opacity: '100%'}}  />
+    </Link>
+   
+   </>
+}
+</>
+
   )
 }

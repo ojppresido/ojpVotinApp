@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import thick from '../images/thick.jpg';
 
 
 const Success = ({logo, name}) => {
@@ -12,7 +13,7 @@ const Success = ({logo, name}) => {
         </Link>
         <h2 className='section-title'>{name}</h2>
         <div className='drink'>
-          <img src={logo} alt={name}></img>
+          <img src={thick} alt={name}></img>
         
         </div>
       </section>

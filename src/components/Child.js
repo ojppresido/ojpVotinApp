@@ -25,7 +25,7 @@ const Child = ({category, product, order, myState, myLga, myWard}) => {
 </div>
 </section>
       }
-     if(product.rep && product.rep===myLga.rep && category===myState && product.senate===myLga.senate){
+     if(product.rep===myLga.rep && category===myState && product.senate===myLga.senate && order.rep ===0){
         return <section className='section'>
             <div className='section-title'>
             <Welcome  category={category} product={product}
@@ -41,7 +41,7 @@ const Child = ({category, product, order, myState, myLga, myWard}) => {
 </div>
 </section>
       }
-      if(order.rep===myWard.rep && category===myState && product===myLga && !product.rep && product.senate===myLga.senate){
+      if(order.rep  && order.rep===myWard.rep && category===myState && product===myLga && product.senate===myLga.senate){
         return <section className='section'>
             <div className='section-title'>
             <Welcome  category={category} product={product}
@@ -57,7 +57,23 @@ const Child = ({category, product, order, myState, myLga, myWard}) => {
 </div>
 </section>
       }
-      if(product.senate===myLga.senate && category===myState  ){
+      if(order.rep  && order.rep!==myWard.rep && category===myState && product===myLga && product.senate===myLga.senate){
+        return <section className='section'>
+            <div className='section-title'>
+            <Welcome  category={category} product={product}
+        order={order} myLga={myLga}
+        myState={myState}  myWard={myWard}/>
+
+            </div>
+        <div className='cocktails-center'>
+     <Page3 category={category} product={product}
+    order={order} myLga={myLga}
+    myState={myState}  myWard={myWard}
+/>
+</div>
+</section>
+      }
+      if(product.senate===myLga.senate && category===myState && order!==order ){
         return<section className='section'>
         <div className='section-title'>
         <Welcome  category={category} product={product}
@@ -75,7 +91,7 @@ myState={myState}  myWard={myWard}
         
        
       }
-      if(category===myState){
+      if(category===myState && product!==product && order!==order){
         return<section className='section'>
         <div className='section-title'>
         <Welcome category={category} product={product}

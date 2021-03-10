@@ -47,7 +47,7 @@ const handleAssb = ()=>{
       <div className='cocktail-footer'>
         <h3>Presidential Election</h3>
         <p style={{color:'black'}}><strong>Federal Republic of Nigeria</strong></p>
-      <Link to='/vote' className='btn btn-primary btn-details' onClick={handlePres} >
+      <Link to className='btn btn-primary btn-details' onClick={handlePres} >
         Vote
       </Link> 
       </div>
@@ -73,9 +73,9 @@ const handleAssb = ()=>{
       <div className='cocktail-footer'>
         <h3>Governorship Election</h3>
         <p style={{color:'black'}}><strong>{category.stateName}</strong></p>
-      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleGov} >
+      <button className='btn btn-primary btn-details' onClick={handleGov} >
         Vote
-      </Link> 
+      </button> 
       </div>
     </article> : 
     <article className='cocktail'>
