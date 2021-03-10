@@ -73,7 +73,7 @@ const Child = ({category, product, order, myState, myLga, myWard}) => {
 </div>
 </section>
       }
-      if(product.senate===myLga.senate && category===myState && order!==order ){
+      if(product.senate===myLga.senate && category===myState && order!==myWard ){
         return<section className='section'>
         <div className='section-title'>
         <Welcome  category={category} product={product}
@@ -91,7 +91,7 @@ myState={myState}  myWard={myWard}
         
        
       }
-      if(category===myState && product!==product && order!==order){
+      if(category===myState && product!==myLga && order!==myWard){
         return<section className='section'>
         <div className='section-title'>
         <Welcome category={category} product={product}

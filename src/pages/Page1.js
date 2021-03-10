@@ -47,7 +47,7 @@ const handleAssb = ()=>{
       <div className='cocktail-footer'>
         <h3>Presidential Election</h3>
         <p style={{color:'black'}}><strong>Federal Republic of Nigeria</strong></p>
-      <Link to className='btn btn-primary btn-details' onClick={handlePres} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handlePres} >
         Vote
       </Link> 
       </div>
@@ -111,10 +111,10 @@ const handleAssb = ()=>{
     // <div className='cocktail-footer'>
     //   <h3 style={{color:'red'}}>Not in Election Year</h3>
     <>
-    <Ballot category={category} product={product} order={order} />
+    {/* <Ballot category={category} product={product} order={order} />
       <button className='btn btn-primary btn-details' onClick={handleSen} >
         Back
-      </button>
+      </button> */}
      {/* </div>
     </article> */}
     </>
@@ -140,10 +140,10 @@ const handleAssb = ()=>{
     // <div className='cocktail-footer'>
     //   <h3 style={{color:'red'}}>Not in Election Year</h3>
     <>
-    <Ballot />
+    {/* <Ballot />
       <Link to='/vote' className='btn btn-primary btn-details' onClick={handleRep} >
         Back
-      </Link>
+      </Link> */}
      {/* </div>
      </article> */}
     </>
@@ -169,10 +169,10 @@ const handleAssb = ()=>{
     // <div className='cocktail-footer'>
     //   <h3 style={{color:'red'}}>Not in Election Year</h3>
     <>
-    <Ballot />
+    {/* <Ballot />
       <Link to='/vote' className='btn btn-primary btn-details' onClick={handleAssb} >
         Back
-      </Link>
+      </Link> */}
     {/* </div>
     </article> */}
     </>
