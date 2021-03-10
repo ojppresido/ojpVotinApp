@@ -1,7 +1,7 @@
 import React from 'react'
 import {Pick} from '../data/PartyImg';
 import PartySelect from './PartySelect';
-import { Link as Button } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,11 +16,11 @@ export default function Party({category, product, order}) {
 
       </div>
       <center>
-    <Button  className='btn btn-primary btn-details'
+    <Link  className='btn btn-primary btn-details'
     style={{color:'white', backgroundColor:'grey'}}
         >
          <strong> I`m Not Voting</strong>
-        </Button>
+        </Link>
         </center>
     </section>
   )

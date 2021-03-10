@@ -16,7 +16,7 @@ export default function PartySelect({name, logo, category, product, order}) {
   return (
     <>{!vote ?
       <>
-    <div to='/voteOk' logo={logo} name={name} className='cocktail' >
+    <div  logo={logo} name={name} className='cocktail' >
       <div className='img-container'>
         <img src={logo} alt={name} />
       </div>
@@ -35,7 +35,7 @@ export default function PartySelect({name, logo, category, product, order}) {
    </> :
 
    <>
-   <div to='/voteOk' logo={logo} name={name} className='cocktail' >
+   <div  logo={logo} name={name} className='cocktail' >
    
       <div className='img-container'>
         <img src={logo} alt={name} />
@@ -49,7 +49,7 @@ export default function PartySelect({name, logo, category, product, order}) {
         </button>
       </div>
     </div>
-    <Link to='/voteOk'> 
+    <Link to='/voteOk' > 
     <img src={mark} alt='thumb' style={{height: '100px', width:'250px', marginLeft: '150px',marginTop: '-165px', opacity: '100%'}}  />
     </Link>
    
