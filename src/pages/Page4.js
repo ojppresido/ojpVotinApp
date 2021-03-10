@@ -1,5 +1,7 @@
 import React from 'react'
 import img from '../images/download.jpg';
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -30,9 +32,9 @@ const handleGov = ()=>{
       <div className='cocktail-footer'>
         <h3>Presidential Election</h3>
         <p style={{color:'black'}}><strong>Federal Republic of Nigeria</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handlePres} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handlePres} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
     <article className='cocktail'>
@@ -56,9 +58,9 @@ const handleGov = ()=>{
       <div className='cocktail-footer'>
         <h3>Governorship Election</h3>
         <p style={{color:'black'}}><strong>{category.stateName}</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handleGov} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleGov} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
     <article className='cocktail'>

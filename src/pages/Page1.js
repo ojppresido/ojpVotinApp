@@ -2,6 +2,10 @@ import React from 'react'
 import img from '../images/download.jpg';
 import sent from '../images/download.png';
 import rep from '../images/rep.jpg';
+import Ballot from '../components/Party';
+import { Link } from 'react-router-dom'
+
+
 
 
 
@@ -43,9 +47,9 @@ const handleAssb = ()=>{
       <div className='cocktail-footer'>
         <h3>Presidential Election</h3>
         <p style={{color:'black'}}><strong>Federal Republic of Nigeria</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handlePres} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handlePres} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
     <article className='cocktail'>
@@ -69,9 +73,9 @@ const handleAssb = ()=>{
       <div className='cocktail-footer'>
         <h3>Governorship Election</h3>
         <p style={{color:'black'}}><strong>{category.stateName}</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handleGov} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleGov} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
     <article className='cocktail'>
@@ -95,22 +99,25 @@ const handleAssb = ()=>{
       <div className='cocktail-footer'>
         <h3 style={{color:'red'}}>Senatorial Election</h3>
         <p style={{color:'black'}}><strong>{product.senate}</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handleSen} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleSen} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
-    <article className='cocktail'>
-    <div className='img-container'>
-      <img src={category.senate} alt='mam' />
-    </div>
-    <div className='cocktail-footer'>
-      <h3 style={{color:'red'}}>Not in Election Year</h3>
+    // <article className='cocktail'>
+    // <div className='img-container'>
+    //   <img src={category.senate} alt='mam' />
+    // </div>
+    // <div className='cocktail-footer'>
+    //   <h3 style={{color:'red'}}>Not in Election Year</h3>
+    <>
+    <Ballot category={category} product={product} order={order} />
       <button className='btn btn-primary btn-details' onClick={handleSen} >
         Back
       </button>
-    </div>
-    </article>
+     {/* </div>
+    </article> */}
+    </>
     }
 
 {!vote3 ?
@@ -121,22 +128,25 @@ const handleAssb = ()=>{
       <div className='cocktail-footer'>
       <h3 style={{color:'green'}}>House of Representative Election</h3>
         <p style={{color:'black'}}><strong>{!product.rep  ? order.rep : product.rep}</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handleRep} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleRep} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
-    <article className='cocktail'>
-    <div className='img-container'>
-      <img src={category.rep} alt='mam' />
-    </div>
-    <div className='cocktail-footer'>
-      <h3 style={{color:'red'}}>Not in Election Year</h3>
-      <button className='btn btn-primary btn-details' onClick={handleRep} >
+    // <article className='cocktail'>
+    // <div className='img-container'>
+    //   <img src={category.rep} alt='mam' />
+    // </div>
+    // <div className='cocktail-footer'>
+    //   <h3 style={{color:'red'}}>Not in Election Year</h3>
+    <>
+    <Ballot />
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleRep} >
         Back
-      </button>
-    </div>
-    </article>
+      </Link>
+     {/* </div>
+     </article> */}
+    </>
     }
 
 {!vote4 ?
@@ -147,22 +157,25 @@ const handleAssb = ()=>{
      <div className='cocktail-footer'>
        <h3 style={{color:'red'}}>State House of Assembly Election</h3>
        <p style={{color:'black'}}><strong>{product.lgaName}</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handleAssb} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleAssb} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
-    <article className='cocktail'>
-    <div className='img-container'>
-      <img src={category.Assb} alt='mam' />
-    </div>
-    <div className='cocktail-footer'>
-      <h3 style={{color:'red'}}>Not in Election Year</h3>
-      <button className='btn btn-primary btn-details' onClick={handleAssb} >
+    // <article className='cocktail'>
+    // <div className='img-container'>
+    //   <img src={category.Assb} alt='mam' />
+    // </div>
+    // <div className='cocktail-footer'>
+    //   <h3 style={{color:'red'}}>Not in Election Year</h3>
+    <>
+    <Ballot />
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handleAssb} >
         Back
-      </button>
-    </div>
-    </article>
+      </Link>
+    {/* </div>
+    </article> */}
+    </>
     }         
       </>
     )

@@ -1,5 +1,7 @@
 import React from 'react'
 import img from '../images/download.jpg';
+import { Link } from 'react-router-dom'
+import Ballot from '../components/Party';
 
 
 
@@ -26,9 +28,9 @@ const Array = ({category, product, order, myState, myLga, myWard}) => {
       <div className='cocktail-footer'>
         <h3>Presidential Election</h3>
         <p style={{color:'black'}}><strong>Federal Republic of Nigeria</strong></p>
-      <button className='btn btn-primary btn-details' onClick={handlePres} >
+      <Link to='/vote' className='btn btn-primary btn-details' onClick={handlePres} >
         Vote
-      </button> 
+      </Link> 
       </div>
     </article> : 
     <article className='cocktail'>

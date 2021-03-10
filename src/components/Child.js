@@ -10,11 +10,12 @@ import Page5 from '../pages/Page5';
 const Child = ({category, product, order, myState, myLga, myWard}) => {
 
      if(product.rep && product.rep===myLga.rep && category===myState && product.senate===myLga.senate){
-        return<section className='section'>
+        return <section className='section'>
             <div className='section-title'>
             <Welcome  category={category} product={product}
         order={order} myLga={myLga}
         myState={myState}  myWard={myWard}/>
+        
             </div>
             <div className='cocktails-center'>
          <Page1 category={category} product={product}
